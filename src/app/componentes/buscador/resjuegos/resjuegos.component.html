@@ -1,0 +1,11 @@
+<h1>Tu búsqueda: <small>{{ palabrasBusqueda }}</small></h1>
+<hr>
+<div class="row">
+  <div class="card" style="width: 18rem;" *ngFor="let juego of juegos; let i = index">
+    <img class="card-img-top" [src]="juego.imagen" [alt]="juego.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{juego.nombre}}</h5>
+      <a [routerLink]="['/juego',idConsola,juego.nombre]" class="btn btn-primary">Ficha Técnica</a>
+    </div>
+  </div>
+</div>
