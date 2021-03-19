@@ -5,24 +5,28 @@ export class ConsolasService {
 
   private consolas:Consola[] = [
     {
+      id:0,
       nombre: "PC Master Race",
       descripcion: "Juegos para PC",
       caracteristicas: "Texto y listado de las características de la consola PC Master Race...",
       imagen: "assets/pcmr.jpg",
       juegos: [
         {
+          id:0,
           imagen: "assets/tlou.jpg",
           nombre: "Juego PC 1",
           developer: "Naughty Dog",
           lanzamiento: "2013"
         },
         {
+          id:1,
           imagen: "assets/p5.jpg",
           nombre: "Juego PC 2",
           developer: "P-Studio",
           lanzamiento: "2017"
         },
         {
+          id:2,
           imagen: "assets/hzd.jpg",
           nombre: "Juego PC 3",
           developer: "Guerrilla Games",
@@ -31,24 +35,28 @@ export class ConsolasService {
       ]
     },
     {
+      id: 1,
       nombre: "Playstation 4",
       descripcion: "Juegos para PS4",
       caracteristicas: "Texto y listado de las características de la consola Playstation 4...",
       imagen: "assets/ps4.jpg",
       juegos: [
         {
+          id: 0,
           imagen: "assets/p5.jpg",
           nombre: "Persona 5",
           developer: "P-Studio",
           lanzamiento: "2017"
         },
         {
+          id: 1,
           imagen: "assets/tlou.jpg",
           nombre: "The Last of Us",
           developer: "Naughty Dog",
           lanzamiento: "2013"
         },
         {
+          id: 2,
           imagen: "assets/hzd.jpg",
           nombre: "Horizon: Zero Dawn",
           developer: "Guerrilla Games",
@@ -57,24 +65,28 @@ export class ConsolasService {
       ]
     },
     {
+      id: 2,
       nombre: "Xbox One",
       descripcion: "Juegos para Xbox One",
       caracteristicas: "Texto y listado de las características de la consola Xbox One...",
       imagen: "assets/xboxone.jpg",
       juegos: [
         {
+          id: 0,
           imagen: "assets/tlou.jpg",
           nombre: "Juego Xbox 1",
           developer: "Naughty Dog",
           lanzamiento: "2013"
         },
         {
+          id: 1,
           imagen: "assets/p5.jpg",
           nombre: "Juego Xbox 2",
           developer: "P-Studio",
           lanzamiento: "2017"
         },
         {
+          id: 2,
           imagen: "assets/hzd.jpg",
           nombre: "Juego Xbox 3",
           developer: "Guerrilla Games",
@@ -83,24 +95,28 @@ export class ConsolasService {
       ]
     },
     {
+      id: 3,
       nombre: "Nintendo Switch",
       descripcion: "Juegos para Nintendo Switch",
       caracteristicas: "Texto y listado de las características de la consola Nintendo Switch...",
       imagen: "assets/nswitch.jpg",
       juegos: [
         {
+          id: 0,
           imagen: "assets/tlou.jpg",
           nombre: "Juego Switch 1",
           developer: "Naughty Dog",
           lanzamiento: "2013"
         },
         {
+          id: 1,
           imagen: "assets/p5.jpg",
           nombre: "Juego Switch 2",
           developer: "P-Studio",
           lanzamiento: "2017"
         },
         {
+          id: 2,
           imagen: "assets/hzd.jpg",
           nombre: "Juego Switch 3",
           developer: "Guerrilla Games",
@@ -165,6 +181,7 @@ export class ConsolasService {
       for(let juego of consola.juegos){
         let nombreJuego = juego.nombre.toLowerCase();
         if (nombreJuego.indexOf(palabras) >= 0) {
+          juego.idConsola = consola.id;
           resultadoJuegos.push(juego);
         }
       }
@@ -174,6 +191,7 @@ export class ConsolasService {
 }
 
 export interface Consola{
+  id: number;
   nombre:string;
   descripcion:string;
   caracteristicas:string;

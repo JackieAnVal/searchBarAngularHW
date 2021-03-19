@@ -20,12 +20,7 @@ export class JuegoComponent implements OnInit {
       console.log(params['idJuego']);
       this.idConsola = params['idConsola'];
       this.idJuego = params['idJuego'];
-      if(this.idConsola=='undefined'){
-        this.juego = this.consolasService.obtieneJuegoBusqueda(this.idJuego);
-      }
-      else{
-        this.juego = this.consolasService.obtieneJuego(this.idConsola, this.idJuego);
-      }
+      this.juego = this.consolasService.obtieneJuego(this.idConsola, this.idJuego);
     })
   }
 
